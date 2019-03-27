@@ -9,5 +9,8 @@ const resolvers = {
       managers: collector.getManagers,
       getEmployee:  collector.getEmployee
     },
+    Mutation: {
+      addEmployee: collector.addEmployee
+    }
 };
 module.exports = resolvers;

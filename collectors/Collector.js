@@ -27,3 +27,8 @@ exports.getEmployee = async (root, args) => {
   let {name} = args;
   return await Employee.findOne({ 'name': name});
 };
+
+exports.addEmployee = async (root, args) => {
+  let {employee} = args;
+  return await Employee.create(employee);
+};

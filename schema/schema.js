@@ -15,6 +15,12 @@ const typeDefs = gql`
     designation: String
   }
 
+  input EmployeeInput {
+    id: String
+    name: String
+    designation: String
+  }
+
   type Manager {
     id: String
     name: String
@@ -28,6 +34,9 @@ const typeDefs = gql`
     employees: [Employee],
     managers: [Manager],
     getEmployee(name: String): Employee,
+  }
+  type Mutation {
+    addEmployee(employee: EmployeeInput): Employee
   }
 `;
 
